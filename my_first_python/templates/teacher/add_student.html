@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>school
+	</title>
+	<script type="text/javascript" src="{% static "js/regVal.js" %}"> </script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	
+</head>
+<body>
+	
+	
+		<div class="col-md-5 col-md-offset-3">
+			<div class="contact-form">
+			<h2><center>Add Student</center></h2>
+				<form name="formchk"  method="post" action="/teacher/register_student/">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="name">Full Name</label>
+						<input type="text" class="form-control" id="name" name="name">
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone:</label>
+						<input type="phone" class="form-control" id="phone" name="phone">
+					</div>
+					<div class="form-group">
+						<label for="student_id">Student Id:</label>
+						<input type="text" class="form-control" id="student_id" name="student_id">
+					</div>
+					
+					<div class="form-group">
+						<label for="dob">Date of birth:</label>
+						<input type="text" class="form-control" id="dob" name="dob">
+					</div>
+					<div class="form-group">
+						<label for="address">Address:</label>
+						<textarea class="form-control" id="address" name="address"></textarea> 
+					</div>
+					<div class="form-group">
+						<label for="gender">Gender:</label>
+					<label class="form-check-label"><input checked="" class="form-check-input" name="gender" type="radio" value="Male">Male</label>
+                    <label class="form-check-label"><input class="form-check-input" name="gender" type="radio" value="Female">Female</label>
+              		</div>
+              		<div class="form-group">
+						<label for="date">joining date:</label>
+						<input type="text" class="form-control" id="joining" name="joining">
+              		</div>
+					<div class="form-group">
+						<label for="class">class:</label>
+						<input type="text" class="form-control" id="class" name="Class">
+					</div>
+					<div class="form-group">
+						<label for="section">section:</label>
+						<input type="text" class="form-control" id="section" name="section">
+					</div>
+					<div class="form-group">
+						<label for="guardian">Guardian:</label>
+						<input type="text" class="form-control" id="guardian" name="guardian">
+					</div>
+  					<input type="submit" name="register" value="REGISTER">
+				</form>
+			</div>
+		</div>
+</body>
+</html>
+
+
+<!-- action="/insData/" -->

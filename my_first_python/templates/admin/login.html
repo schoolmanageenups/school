@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>school
+	</title>
+	<script type="text/javascript" src="{% static "js/regVal.js" %}"> </script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	
+</head>
+<body>
+	
+		<div class="col-md-5 col-md-offset-3">
+			<div class="contact-form">
+			<h2><center>Admin Login</center></h2>
+				<form name="formchk"  method="post" action="/admin/admin_login_action/">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="name">email</label>
+						<input type="text" class="form-control" id="email" name="email">
+					</div>
+					<div class="form-group">
+						<label for="email">Password</label>
+						<input type=password class="form-control" id="password" name="password">
+					</div>
+					
+  					<input type="submit" name="login" value="LOGIN">
+				</form>
+			</div>
+		</div>
+</body>
+</html>
+
+
+<!-- action="/insData/" -->
