@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse
-from models import Admin_panel,Classes,Section
+from .models import Admin_panel,Classes,Section
 from teacher.models import Teachers
 import random
 import datetime
@@ -28,10 +28,10 @@ def admin_login_action(request):
     password=request.POST.get('password','')
     # r=Employee.objects.all().filter(name=name,password=psw)
     r=Admin_panel.objects.all().filter(email=email,password=password)
-    print r
+    print (r)
     if r.exists():
         # 
-        print r[0].email
+        print (r[0].email)
         request.session["un"]=r[0].id
               #passing db data
         st={

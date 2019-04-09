@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>school
+	</title>
+	<script type="text/javascript" src="{% static "js/regVal.js" %}"> </script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	
+</head>
+<body>
+	
+	<img style="margin-left: 32%" src="{% static "img/26.jpg" %}" alt="My image" height="200">
+		<div class="col-md-5 col-md-offset-3">
+			<div class="contact-form">
+			<h2><center>Exam Notification</center></h2>
+				<form name="formchk"  method="post" action="/officestaff/addexamnotif/">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="Title">Title :</label>
+						<input type="text" class="form-control" id="title" name="title">
+					</div>
+					<div class="form-group">
+						<label for="class">Class :</label>
+						<input type="phone" class="form-control" id="class" name="class">
+					</div>
+					<div class="form-group">
+						<label for="discription">Discription :</label>
+						<input type="text" class="form-control" id="discription" name="discription">
+					</div>
+					<div class="form-group">
+						<label for="Date">Date :</label>
+						<input type="date" class="form-control" id="date" name="date">
+					</div>
+				
+  					<input type="submit" name="submit" value="SUBMIT">
+				</form>
+			</div>
+		</div>
+</body>
+</html>

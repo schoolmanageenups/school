@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>school
+	</title>
+	<script type="text/javascript" src="{% static "js/regVal.js" %}"> </script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	
+</head>
+<body>
+	
+	<img style="margin-left: 32%" src="{% static "img/26.jpg" %}" alt="My image" height="200">
+		<div class="col-md-5 col-md-offset-3">
+			<div class="contact-form">
+			<h2><center>Fees </center></h2>
+				<form name="formchk"  method="post" action="/officestaff/addfees/">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="Admission No">Student Admission No :</label>
+						<input type="text" class="form-control" id="admission" name="admission">
+					</div>
+					<div class="form-group">
+						<label for="student">Student :</label>
+						<input type="phone" class="form-control" id="student" name="student">
+					</div>
+					<div class="form-group">
+						<label for="Username">Fees :</label>
+						<input type="text" class="form-control" id="fees" name="fees">
+					</div>
+					
+					
+					
+
+  					<input type="submit" name="submit" value="SUBMIT">
+				</form>
+			</div>
+		</div>
+</body>
+</html>

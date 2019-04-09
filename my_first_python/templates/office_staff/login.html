@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>school
+	</title>
+	<script type="text/javascript" src="{% static "js/regVal.js" %}"> </script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	
+</head>
+<body>
+	
+	<img style="margin-left: 32%" src="{% static "img/26.jpg" %}" alt="My image" height="200">
+		<div class="col-md-5 col-md-offset-3">
+			<div class="contact-form">
+			<h2><center>Office Staff Login</center></h2>
+				<form name="formchk"  method="post" action="/">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="name">Username</label>
+						<input type="text" class="form-control" id="name" name="name">
+					</div>
+					<div class="form-group">
+						<label for="email">Password</label>
+						<input type=password class="form-control" id="password" name="password">
+					</div>
+					
+  					<input type="submit" name="login" value="LOGIN">
+				</form>
+			</div>
+		</div>
+</body>
+</html>

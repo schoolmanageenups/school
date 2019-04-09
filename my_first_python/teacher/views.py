@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse
-from models import Teachers
+from .models import Teachers
 from student.models import Student
 import random
 import datetime
@@ -33,7 +33,7 @@ def login_check(request):
     r=Teachers.objects.all().filter(email=email,password=password)
     if r.exists():
         # 
-        print r[0].email
+        print (r[0].email)
         request.session["un"]=r[0].id
               #passing db data
         st={

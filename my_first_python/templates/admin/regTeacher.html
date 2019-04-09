@@ -12,9 +12,10 @@
 </head>
 <body>
 	
-  		<div class="col-md-5 col-md-offset-3">
+	<img style="margin-left: 32%" src="{% static "img/26.jpg" %}" alt="My image" height="200">
+		<div class="col-md-5 col-md-offset-3">
 			<div class="contact-form">
-			<h2><center> Teacher Register</center></h2>
+			<h2><center>Teacher Register</center></h2>
 				<form name="formchk"  method="post" action="/admin/register_action/">
 					{% csrf_token %}
 					<div class="form-group">
@@ -43,8 +44,8 @@
 					</div>
 					<div class="form-group">
 						<label for="password">Gender:</label>
-					<label class="form-check-label"><input checked="" class="form-check-input" name="gender" type="radio" value="Male">MALE</label>
-                    <label class="form-check-label"><input class="form-check-input" name="gender" type="radio" value="Female">FEMALE</label>
+					<label class="form-check-label"><input checked="" class="form-check-input" name="gender" type="radio" value="Male"></label>
+                    <label class="form-check-label"><input class="form-check-input" name="gender" type="radio" value="Female"></label>
               		</div>
               		<div class="form-group">
 						<label for="password">Staff Category:</label>
